@@ -76,3 +76,8 @@ dfToPredict
 
 yPredict = gnb.predict(dfToPredict)
 print('La classe predite est : ', yPredict)
+
+# Write scores to a file
+with open("metrics.txt", 'w') as outfile:
+        outfile.write("recall score:  {0:2.1f} \n".format(recall_score))
+        outfile.write("f1 score {0:2.1f}\n".format(f1_score))
